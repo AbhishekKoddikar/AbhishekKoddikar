@@ -3,81 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhishek Koddikar | Projects</title>
+    <title>Abhishek Koddikar | Portfolio</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-            color: #222;
+            line-height: 1.6;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+
+        nav {
+            background: #111827;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
         }
 
         header {
             background: #111827;
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 90px 20px;
         }
 
-        main {
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+            color: #cbd5e1;
+        }
+
+        section {
             max-width: 1000px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 70px 20px;
         }
 
-        h2 {
+        section h2 {
             text-align: center;
-            margin-bottom: 30px;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
         }
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
         }
 
         .project {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
         .project h3 {
-            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 18px;
+            background: #2563eb;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .project a:hover {
+            background: #1d4ed8;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .skill {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+            font-weight: bold;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #111827;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            header {
+                padding: 65px 20px;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 50px 18px;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Abhishek Koddikar</h1>
-    <p>Developer Portfolio</p>
-</header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<main>
+    <header>
+        <h1>Abhishek Koddikar</h1>
+        <p>CSE · AI & Data Science Student | Developer</p>
+    </header>
+
+    <section id="about">
+        <h2>About</h2>
+
+        <div class="about">
+            <p>
+                I am a Computer Science and Engineering student specializing
+                in Artificial Intelligence and Data Science. I enjoy building
+                practical projects, exploring AI and web technologies, and
+                continuously improving my programming and development skills.
+            </p>
+        </div>
+    </section>
+
     <section id="projects">
         <h2>Projects</h2>
 
         <div class="projects">
+
             <div class="project">
-                <h3>GitHub Practice Repository</h3>
-                <p>A project created to learn Git, GitHub, branching, commits and pull requests.</p>
+                <h3>TravelUPI</h3>
+
+                <p>
+                    A digital payment concept designed to help international
+                    tourists and NRIs make UPI payments in India without
+                    requiring a local bank account.
+                </p>
+
+                <a href="https://elegant-snickerdoodle-40c3f6.netlify.app/"
+                   target="_blank">
+                    View Project
+                </a>
             </div>
 
             <div class="project">
-                <h3>Web Development Project</h3>
-                <p>A simple responsive website demonstrating HTML and CSS skills.</p>
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A responsive personal portfolio website showcasing
+                    my skills, projects, education and contact information.
+                </p>
+
+                <a href="https://abhishek-eight-eosin.vercel.app/"
+                   target="_blank">
+                    View Project
+                </a>
             </div>
 
-            <div class="project">
-                <h3>API Integration Project</h3>
-                <p>A project demonstrating REST API requests and JavaScript development.</p>
-            </div>
         </div>
     </section>
-</main>
+
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">C</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Git</div>
+            <div class="skill">GitHub</div>
+            <div class="skill">AI & Data Science</div>
+            <div class="skill">REST APIs</div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <div class="contact">
+            <p>Email: <a href="mailto:akoddikar077@gmail.com">akoddikar077@gmail.com</a></p>
+                Contact Me
+            </a></p>
+
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/abhishek-koddikar-64461a33b/"
+                   target="_blank">
+                    LinkedIn Profile
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/AbhishekKoddikar/AbhishekKoddikar"
+                   target="_blank">
+                    GitHub Profile
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Abhishek Koddikar. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
